@@ -12,8 +12,9 @@ public class Atestado extends Operacao {
 		this.cid = cid;
 	}
 	
-	public void emitirAtestado() {
+	public void emitirAtestado(Atendimento atendimento) {
 		
+		System.out.println("O Paciente foi atenido");
 	}
 
 	public String toString() {

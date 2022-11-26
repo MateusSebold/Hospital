@@ -1,6 +1,9 @@
 package Hospital;
 
+
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Operacao {
 	private Date inicio;
@@ -21,6 +24,18 @@ public class Operacao {
 	
 	public Date tenmpoTotal() {
 		return null;
+	}
+	
+	public int tempoTotal() {
+		
+		Calendar inicio = new GregorianCalendar();;
+		Calendar fim = new GregorianCalendar();
+		
+        fim.setTime(getFim());
+        inicio.setTime(getFim());
+        
+		int tempo = fim.get(Calendar.HOUR) - inicio.get(Calendar.HOUR);
+		return tempo;
 	}
 	
 	public String toString() {

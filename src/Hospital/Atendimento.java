@@ -31,6 +31,14 @@ public class Atendimento extends Operacao {
 	public void setMedico(Paciente medico) {
 		this.medico = medico;
 	}
+	
+	public void calculaPrioridade(boolean respostas) {
+		if (respostas == true) 
+			setPrioridade(1);
+		else
+			setPrioridade(2);
+		
+	}
 
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

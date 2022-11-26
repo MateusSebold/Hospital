@@ -1,6 +1,7 @@
 package Hospital;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Calendar;
 public class Pessoa {
 	
@@ -20,9 +21,14 @@ public class Pessoa {
 		this.nome = nome;
 	}
 	
-	public int CalcularIdade() {
-		return 0;
+	public int calcularIdade() {
 		
+		Calendar hoje = Calendar.getInstance();
+		Calendar dataNasci = new GregorianCalendar();
+
+        dataNasci.setTime(getDataNascimento());
+		int idade = hoje.get(Calendar.YEAR) - dataNasci.get(Calendar.YEAR);
+		return idade;
 	}
 	
 	public String toString() {
